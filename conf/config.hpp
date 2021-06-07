@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   config.hpp                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: monie <monie@student.42.fr>                +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/20 15:16:31 by monie             #+#    #+#             */
-/*   Updated: 2021/05/18 18:54:57 by monie            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <iostream>
 #include <string>
 #include <vector>
@@ -24,9 +12,8 @@ enum  Method
 	UNSUPPORTED = 4
 };
 
-
 struct Location {
-	std::string			path;
+	std::string			location;
 	std::string			index;
 	bool				autoindex;
 	std::string			auth;

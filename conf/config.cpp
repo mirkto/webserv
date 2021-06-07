@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   config.cpp                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: monie <monie@student.42.fr>                +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/20 15:16:27 by monie             #+#    #+#             */
-/*   Updated: 2021/05/20 18:25:23 by monie            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "config.hpp"
 
 void Config::init() {
@@ -42,7 +30,7 @@ void Config::init_server() {
 
 void Config::init_location() {
 	Location new_location;
-	_location.path.clear();
+	_location.location.clear();
 	_location.index.clear();
 	_location.autoindex = false;
 	_location.auth.clear();
@@ -196,7 +184,7 @@ void Config::filling_parameter_server(std::string name , std::string parameter) 
 	} else if(name == "error_page") {
 		_server.error_page = parameter;
 	} else if(name == "location") {
-		_location.path = parameter;
+		_location.location = parameter;
 	}
 }
 
@@ -352,7 +340,7 @@ void Config::see_config() {
 		std::cout << "error_page\t\t" << it->error_page << std::endl;
 		for(std::vector<Location>::iterator i = it->location.begin(); i != it->location.end(); i++) {
 			std::cout << "=============== " << "new location\t" << " ===============" << std::endl;
-			std::cout << "location path\t\t" << i->path << std::endl;
+			std::cout << "location path\t\t" << i->location << std::endl;
 			std::cout << "location index\t\t" << i->index << std::endl;
 			std::cout << "location autoindex\t" << i->autoindex << std::endl;
 			std::cout << "location auth\t\t" << i->auth << std::endl;
